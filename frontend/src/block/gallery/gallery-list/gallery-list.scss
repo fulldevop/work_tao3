@@ -1,0 +1,59 @@
+@import "~style";
+
+$block-name: 'b-gallery-list';
+
+.#{$block-name} {
+	@include animation-heartbeat;
+
+	&__img {
+		border: 30px solid #91d7a6;
+		margin: 10px;
+		position: relative;
+
+		&:hover {
+			animation: heartbeat 1.5s ease-in-out infinite both;
+		}
+	}
+
+	&__caption {
+		margin: 0;
+		position: absolute;
+		line-height: 1.1;
+		font-size: 1.2em;
+		font-weight: 200;
+		left: 0;
+		bottom: 0;
+		padding: 6px 20px 6px 10px;
+		background: hsla(21, 37%, 15%, 0.2);
+		color: white;
+	}
+
+	.image-source-link {
+		color: #98c3d1;
+	}
+
+	.mfp-with-zoom .mfp-container,
+	.mfp-with-zoom.mfp-bg {
+		opacity: 0;
+		-webkit-backface-visibility: hidden;
+
+		/* ideally, transition speed should match zoom duration */
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
+	.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+	}
+
+	.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+	}
+
+	.mfp-with-zoom.mfp-removing .mfp-container,
+	.mfp-with-zoom.mfp-removing.mfp-bg {
+		opacity: 0;
+	}
+}

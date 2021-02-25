@@ -1,0 +1,10 @@
+project %%PROJECT_NAME%%
+
+ln /storage/app/public
+ln /storage/app/vars
+
+path_to_frontend frontend
+
+cp .env
+prepare vcomposer install
+rsyncd vendor

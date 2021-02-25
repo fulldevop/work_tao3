@@ -1,0 +1,46 @@
+{
+	"name": "techart/tao3",
+	"description": "Techart extensions for Laravel",
+	"version": "6.1.1",
+	"license": "Apache-2.0",
+	"authors": [
+		{
+			"name": "Techart",
+			"homepage": "http://web-techart.ru/"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"TAO\\": "src/TAO",
+			"TaoTests\\": "tests/"
+		}
+	},
+	"require": {
+		"PHP": "~7.3",
+		"laravel/framework": "^8.0",
+		"laravel/tinker": "^2.0",
+		"laravel/helpers": "~1.1",
+		"scssphp/scssphp": "^1.0",
+		"ramsey/uuid": "^4.1",
+		"curl/curl": "~1.7",
+		"doctrine/dbal": "^2.10",
+		"intervention/image": "^2.5",
+		"mews/purifier": "3.3",
+		"tinymce/tinymce": "^5.0",
+		"guzzlehttp/guzzle": "^6.4",
+		"laracasts/utilities": "^3.0",
+		"techart/frontend-api": "^4.0",
+		"laravelium/sitemap": "^8.0",
+		"laravel/ui": "^3.0"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"TAO\\Provider"
+			]
+		}
+	},
+	"require-dev": {
+		"orchestra/testbench": "~4"
+	}
+}
