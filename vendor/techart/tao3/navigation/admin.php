@@ -47,6 +47,11 @@ $nav = array(
         'title' => 'Сайт',
         'sub' => $site,
     ),
+    '*constructor' => array(
+        'access' => 'root',
+        'url' => '/admin/constructor/',
+        'title' => 'Конструктор полей',
+    ),
 );
 
 $nav = array_merge($nav, $dt);

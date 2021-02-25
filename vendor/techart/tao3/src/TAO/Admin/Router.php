@@ -44,6 +44,9 @@ class Router extends \TAO\Router
 			} elseif ($path == 'vars') {
 				$this->vars = config("vars", []);
 				app()->router->any("/admin/vars", '\\TAO\\Admin\\Controller\\Vars@entryPointAction');
+			} elseif ($path == 'constructor') {
+				$this->vars = config("constructor", []);
+				app()->router->any("/admin/constructor", '\\TAO\\Admin\\Controller\\ConstructorFields@entryPointAction');
 			}
 		}
 
