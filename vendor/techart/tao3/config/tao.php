@@ -1,7 +1,7 @@
 <?php return [
 
 	'frontend_env' => env('FRONTEND_ENV', false),
-	
+
 	'routers' => [
 		'users' => \TAO\Users\Router::class,
 		'fspages' => \TAO\FSPages\Router::class,
@@ -18,6 +18,7 @@
 		'integer' => \TAO\Fields\Type\Integer::class,
 		'text' => \TAO\Fields\Type\Text::class,
 		'checkbox' => \TAO\Fields\Type\Checkbox::class,
+		'constructor' => \TAO\Fields\Type\Constructor::class,
 		'password' => \TAO\Fields\Type\Password::class,
 		'multilink' => \TAO\Fields\Type\Multilink::class,
 		'multilink_tags' => \TAO\Fields\Type\MultilinkTags::class,
@@ -58,8 +59,9 @@
 	'datatypes' => [
 		'users' => \TAO\ORM\Model\User::class,
 		'roles' => \TAO\ORM\Model\Role::class,
+		'constructor_fields' => \TAO\ORM\Model\ConstructorFields::class,
 	],
-	
+
 	'resources_paths' => [],
 
 	'insertions' => [

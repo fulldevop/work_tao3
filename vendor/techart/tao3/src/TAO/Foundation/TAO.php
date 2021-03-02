@@ -238,7 +238,7 @@ class TAO
 		if (!is_null($datatype)) {
 			return $this->datatypes[$name] = $datatype;
 		}
-		
+
 		if (!is_null($default) && $default) {
 			if (is_string($default)) {
 				$default = app($default);
@@ -246,7 +246,7 @@ class TAO
 			$default->initDatatype();
 			return $default;
 		}
-		
+
 		if (!is_null($default)) {
 			return $default;
 		}
@@ -344,7 +344,7 @@ class TAO
 		if ($datatype) {
 			return $datatype->selector();
 		}
-		
+
 		if ($selector = \TAO\Selector::$routedSelectors[$code] ?? false) {
 			return $selector;
 		}

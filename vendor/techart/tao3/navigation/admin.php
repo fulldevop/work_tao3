@@ -49,7 +49,7 @@ $nav = array(
     ),
     '*constructor' => array(
         'access' => 'root',
-        'url' => '/admin/constructor/',
+        'url' => '/admin/datatype/constructor_fields/',
         'title' => 'Конструктор полей',
     ),
 );

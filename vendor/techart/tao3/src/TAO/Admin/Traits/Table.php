@@ -177,7 +177,7 @@ trait Table
 		}
 		return $actions;
 	}
-	
+
 	public function csvLabel($field, $param)
 	{
 		if (is_string($param)) {
@@ -188,7 +188,7 @@ trait Table
 		}
 		return $this->datatype()->field($field)->labelInAdminList();
 	}
-	
+
 	public function csvValue($row, $field, $param)
 	{
 		if (ends_with($field, '()')) {
@@ -197,7 +197,7 @@ trait Table
 		}
 		return $row->field($field)->csvValue();
 	}
-	
+
 	public function csvRow($row, $fields)
 	{
 		$values = [];
@@ -238,7 +238,7 @@ trait Table
 
 	protected function templateTable()
 	{
-		return 'table.list.table';
+		return 'table.list.table';// подключается шаблон с данными $fields
 	}
 
 	/**
@@ -429,7 +429,7 @@ trait Table
 	 * @param string $mode
 	 * @return array
 	 */
-	protected function generateFields($method, $mode = 'default')
+	protected function generateFields($method, $mode = 'default') // Генерируются $fields
 	{
 		$validationMethod = "in{$method}";
 		$weightMethod = "weightIn{$method}";
