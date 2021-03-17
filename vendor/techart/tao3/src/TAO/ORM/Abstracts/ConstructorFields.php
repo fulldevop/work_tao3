@@ -14,6 +14,7 @@ abstract class ConstructorFields extends AbstractModel
 			'fields_list' => array(
 				'type' => 'text',
 				'label' => 'Список полей',
+//				'attrs' => 'v-model="textOption"',
 				'in_list' => true,
 				'in_form' => true,
 			),

@@ -7,7 +7,8 @@
         class="{{ $form->formClass($__data) }}"
         method="{{ $form->formMethod($__data) }}"
         action="{!! $form->action($__data) !!}"
-        enctype="{{ $form->formEnctype($__data) }}">
+        enctype="{{ $form->formEnctype($__data) }}"
+		{{ $form->renderAttrs() }}>
   @if ($ajax)
     <ul class="ajax-errors"></ul>
   @endif
